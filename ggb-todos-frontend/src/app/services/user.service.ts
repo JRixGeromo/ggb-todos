@@ -8,13 +8,13 @@ export class UserService {
   constructor(private http: Http) { }
 
   getUsers(){
-    return this.http.get('https://still-plateau-74141.herokuapp.com/api/users').map(res => res.json());
+    return this.http.get('https://glacial-tor-94232.herokuapp.com/api/users').map(res => res.json());
   }
 
   saveUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://still-plateau-74141.herokuapp.com/api/users', user, {headers: headers})
+    return this.http.post('https://glacial-tor-94232.herokuapp.com/api/users', user, {headers: headers})
       .map(res => res.json());
   }
 
